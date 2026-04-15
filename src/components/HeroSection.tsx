@@ -92,14 +92,17 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_hsl(42_78%_60%/0.12)]">
-            <img
-              src={profileImg}
-              alt="Jahangir Alam Rakib"
-              width={512}
-              height={512}
-              className="w-full h-full object-cover"
-            />
+          <div className="relative flex flex-col items-center gap-6">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_60px_hsl(42_78%_60%/0.12)]">
+              <img
+                src={profileImg}
+                alt="Jahangir Alam Rakib"
+                width={512}
+                height={512}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <img src={engineerIllustration} alt="Engineer illustration" className="w-40 sm:w-48 opacity-50 invert" />
           </div>
         </motion.div>
       </div>
