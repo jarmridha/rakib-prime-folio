@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { Mail, Phone, MapPin, LinkedinIcon, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Link2, Send } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -24,7 +24,7 @@ const ContactSection = () => {
               {[
                 { icon: Mail, label: "your.email@example.com", href: "mailto:your.email@example.com" },
                 { icon: Phone, label: "+880 XXXX-XXXXXX", href: "tel:+880" },
-                { icon: Linkedin, label: "linkedin.com/in/jahangiralamrakib", href: "https://linkedin.com/in/jahangiralamrakib" },
+                { icon: Link2, label: "linkedin.com/in/jahangiralamrakib", href: "https://linkedin.com/in/jahangiralamrakib" },
                 { icon: MapPin, label: "Bangladesh" },
               ].map(({ icon: Icon, label, href }) => (
                 <div key={label} className="flex items-center gap-3 text-muted-foreground">
