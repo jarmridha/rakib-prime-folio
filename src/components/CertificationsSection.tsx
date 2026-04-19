@@ -6,6 +6,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import certPlaceholder from "@/assets/cert-placeholder.jpg";
 import certPmpUnit3 from "@/assets/cert-pmp-unit-3.jpg";
 import certHighImpactWriting from "@/assets/cert-high-impact-writing.jpg";
+import certInitiatingPlanning from "@/assets/cert-initiating-planning.jpg";
 
 const certs = [
   { title: "PMP Certification: Unit 3", image: certPmpUnit3, pdf: "/certificates/pmp-unit-3.pdf" },
