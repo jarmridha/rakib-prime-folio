@@ -4,9 +4,10 @@ import SectionHeading from "./SectionHeading";
 import { Award, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import certPlaceholder from "@/assets/cert-placeholder.jpg";
+import certPmpUnit3 from "@/assets/cert-pmp-unit-3.jpg";
 
 const certs = [
-  { title: "PMP Certification: Unit 3", image: certPlaceholder },
+  { title: "PMP Certification: Unit 3", image: certPmpUnit3, pdf: "/certificates/pmp-unit-3.pdf" },
   { title: "OSHA Safety Standards and Compliance", image: certPlaceholder },
   { title: "HSE Engineering", image: certPlaceholder },
   { title: "Construction Project Management", image: certPlaceholder },
