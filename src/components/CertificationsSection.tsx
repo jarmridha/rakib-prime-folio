@@ -40,7 +40,26 @@ const CertificationsSection = () => {
         <SectionHeading title="Certifications & Trainings" subtitle="Professional development & industry credentials" />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {certs.map((c, i) => (
+          {certs.map((c, i) => {
+            // Determine column to align preview and avoid viewport clipping
+            const colMod3 = i % 3;
+            const colMod2 = i % 2;
+            // On lg (3 cols): rightmost = right-aligned, leftmost = left-aligned, middle = centered
+            // On sm (2 cols): right col = right-aligned, left col = left-aligned
+            const previewAlign =
+              "left-1/2 -translate-x-1/2 " + // default sm:base centered fallback (overridden below)
+              // sm breakpoint: 2 columns
+              (colMod2 === 0
+                ? "sm:left-0 sm:translate-x-0 "
+                : "sm:left-auto sm:right-0 sm:translate-x-0 ") +
+              // lg breakpoint: 3 columns
+              (colMod3 === 0
+                ? "lg:left-0 lg:right-auto lg:translate-x-0"
+                : colMod3 === 2
+                ? "lg:left-auto lg:right-0 lg:translate-x-0"
+                : "lg:left-1/2 lg:right-auto lg:-translate-x-1/2");
+
+            return (
             <motion.div
               key={c.title}
               ref={(el) => { cardRefs.current[i] = el; }}
@@ -64,7 +83,7 @@ const CertificationsSection = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 z-50 pointer-events-none w-[280px] max-w-[calc(100vw-2rem)]"
+                    className={`absolute bottom-full mb-3 z-50 pointer-events-none w-[280px] max-w-[calc(100vw-2rem)] ${previewAlign}`}
                   >
                     <div className="glass-card rounded-xl overflow-hidden shadow-[0_8px_40px_hsl(var(--gold-glow)/0.15)] border border-primary/20">
                       <img
@@ -81,7 +100,8 @@ const CertificationsSection = () => {
                 )}
               </AnimatePresence>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
