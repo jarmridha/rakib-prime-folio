@@ -110,11 +110,21 @@ const CertificationsSection = () => {
                   <X size={16} />
                 </button>
               </div>
-              <div className="px-5 py-4">
+              <div className="px-5 py-4 space-y-3">
                 <div className="flex items-center gap-2">
                   <Award size={16} className="text-primary shrink-0" />
                   <h3 className="text-sm font-body font-medium text-foreground">{modalCert.title}</h3>
                 </div>
+                {modalCert.pdf && (
+                  <a
+                    href={modalCert.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-xs font-body text-primary hover:underline"
+                  >
+                    View full certificate (PDF) →
+                  </a>
+                )}
               </div>
             </motion.div>
           </motion.div>
