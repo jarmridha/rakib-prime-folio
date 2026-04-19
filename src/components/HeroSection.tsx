@@ -90,7 +90,7 @@ const HeroSection = () => {
               alt="Jahangir Alam Rakib"
               width={512}
               height={512}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </motion.div>
