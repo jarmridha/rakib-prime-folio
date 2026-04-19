@@ -11,6 +11,7 @@ import certManagingRisks from "@/assets/cert-managing-risks.jpg";
 import certConstructionPM from "@/assets/cert-construction-pm.jpg";
 import certHseEngineering from "@/assets/cert-hse-engineering.jpg";
 import certIso45001 from "@/assets/cert-iso-45001.jpg";
+import certIso14001 from "@/assets/cert-iso-14001.jpg";
 
 const certs = [
   { title: "PMP Certification: Unit 3", image: certPmpUnit3, pdf: "/certificates/pmp-unit-3.pdf" },
@@ -18,7 +19,7 @@ const certs = [
   { title: "HSE Engineering", image: certHseEngineering, pdf: "/certificates/hse-engineering.pdf" },
   { title: "Construction Project Management", image: certConstructionPM, pdf: "/certificates/construction-project-management.pdf" },
   { title: "ISO 45001:2018 Awareness", image: certIso45001, pdf: "/certificates/iso-45001-2018.pdf" },
-  { title: "ISO 14001:2015 Awareness", image: certPlaceholder },
+  { title: "ISO 14001:2015 Awareness", image: certIso14001, pdf: "/certificates/iso-14001-2015.pdf" },
   { title: "Standard First Aid, CPR & AED", image: certPlaceholder },
   { title: "Basic Safety Training", image: certPlaceholder },
   { title: "Health & Safety Induction Certificate", image: certPlaceholder },
