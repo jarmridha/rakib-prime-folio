@@ -100,3 +100,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+import profileImg from "@/assets/profile-placeholder.jpg";
+import profileImg from "@/assets/rakib-profile.png";
